@@ -1,9 +1,8 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bencoyne/Desktop/WEEK 4/spec/bookmark_spec.rb": {
+      "/Users/bencoyne/Projects/Week4/bookmarks_challenge/spec/bookmark_spec.rb": {
         "lines": [
-          null,
           1,
           null,
           1,
@@ -18,18 +17,20 @@
           null
         ]
       },
-      "/Users/bencoyne/Desktop/WEEK 4/lib/bookmark.rb": {
+      "/Users/bencoyne/Projects/Week4/bookmarks_challenge/lib/bookmark.rb": {
         "lines": [
           1,
+          null,
           1,
           2,
           null,
           null,
           null,
+          null,
           null
         ]
       },
-      "/Users/bencoyne/Desktop/WEEK 4/spec/features/viewing_bookmarks_spec.rb": {
+      "/Users/bencoyne/Projects/Week4/bookmarks_challenge/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           1,
           1,
@@ -42,6 +43,6 @@
         ]
       }
     },
-    "timestamp": 1641836229
+    "timestamp": 1641843835
   }
 }
