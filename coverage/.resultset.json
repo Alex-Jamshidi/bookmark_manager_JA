@@ -22,12 +22,31 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/bencoyne/Projects/Week4/bookmarks_challenge/spec/features/adding_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
       "/Users/bencoyne/Projects/Week4/bookmarks_challenge/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
-          1,
           1,
           1,
           null,
@@ -45,6 +64,6 @@
         ]
       }
     },
-    "timestamp": 1641996431
+    "timestamp": 1642003175
   }
 }

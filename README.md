@@ -8,6 +8,10 @@ As a user
 So I can re-visit my favourite sites
 I want to see a list of saved bookmarks
 
+As a user
+So I can revisit my favourite sites
+I want to add new bookmarks to my list of saved bookmarks
+
 ```
 
 Domain Model
