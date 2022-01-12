@@ -1,22 +1,23 @@
+ENV['ENVIRONMENT'] = 'test'
+
+require File.join(File.dirname(__FILE__), '..', 'app.rb')
+
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require './spec/setup_test_database'
 
-ENV['ENVIRONMENT'] = 'test'
+Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
+
   config.before(:each) do
     setup_test_database
   end
 end
 
-require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
-
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
-
-Capybara.app = BookmarkManager
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,

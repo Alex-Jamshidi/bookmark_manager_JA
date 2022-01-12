@@ -2,7 +2,7 @@ require 'pg'
 
 class Bookmark
   def self.all
-    if ENV['ENVIROMENT'] == 'test'
+    if ENV['ENVIRONMENT'] = 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else
       connection = PG.connect(dbname: 'bookmark_manager')
@@ -13,7 +13,7 @@ class Bookmark
   end
 
   def self.create(url:)
-    if ENV['ENVIROMENT'] == 'test'
+    if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else
       connection = PG.connect(dbname: 'bookmark_manager')
