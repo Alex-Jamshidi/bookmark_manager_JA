@@ -16,3 +16,5 @@ group :testing do
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
+
+gem 'pg'
