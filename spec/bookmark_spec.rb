@@ -1,8 +1,8 @@
 require 'bookmark'
-require '/Users/bencoyne/Projects/Week4/bookmark_challenge_step_10/spec/features/database_helpers.rb'
+require './spec/features/database_helpers'
 
 describe Bookmark do
-	describe '.all' do
+  describe '.all' do
 		it 'returns an array of bookmarks' do
 			connection = PG.connect(dbname: 'bookmark_manager_test')
 
