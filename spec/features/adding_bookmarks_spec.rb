@@ -3,7 +3,7 @@ feature 'Adding Bookmarks' do
     visit('/bookmarks/new-bookmark')
     fill_in 'title', with: 'Amazon'
     fill_in 'url', with: 'http://www.amazon.co.uk'
-    click_button 'Submit'
+    click_button 'submit'
     
     expect(page).to have_link('Amazon')
   end

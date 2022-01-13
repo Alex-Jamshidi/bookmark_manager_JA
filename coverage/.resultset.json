@@ -36,6 +36,16 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          4,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -65,6 +75,23 @@
           null
         ]
       },
+      "/Users/bencoyne/Projects/Week4/bookmark_challenge_step_10/spec/features/deleting_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/bencoyne/Projects/Week4/bookmark_challenge_step_10/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           1,
@@ -84,6 +111,6 @@
         ]
       }
     },
-    "timestamp": 1642073118
+    "timestamp": 1642101845
   }
 }
