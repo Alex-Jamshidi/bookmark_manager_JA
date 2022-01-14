@@ -12,13 +12,7 @@
 
       <% @bookmarks.each do |bookmark| %>
         <li class='bookmark'>
-          <% if @visible && @visible_id == bookmark.id %>
-          <%  visible = 'visible' %>
-          <% else %>
-          <%  visible = 'hidden' %>
-          <% end %>
-
-          <%= bookmark.id %>
+          <% @visible && @visible_id == bookmark.id ? visible = 'visible' : visible = 'hidden' %>
 
           <a href="<%= bookmark.url %>" class='bm-title'><%= bookmark.title %></a>
           <form action='/edit/<%= bookmark.id %>' method='post' class='bm-button'>

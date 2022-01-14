@@ -17,8 +17,6 @@ class BookmarkManager < Sinatra::Base
     @bookmarks = Bookmark.all
     @visible = session[:visible]
     @visible_id = session[:visible_id]
-    p "visible id coming up"
-    p @visible
 
     erb :'/bookmarks/index'
   end
@@ -40,8 +38,7 @@ class BookmarkManager < Sinatra::Base
   patch '/edit/:id' do
     session[:visible] = 'visible'
     session[:visible_id] = params[:id]
-    p "session coming up"
-    p session[:visible]
+
     redirect '/bookmarks'
   end
 
