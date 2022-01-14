@@ -17,6 +17,7 @@ body {
   background-color: rgb(148, 148, 148);
   font-style: bold;
   color: red;
+  display: inline;
 }
 
 .standard_input {
@@ -26,4 +27,13 @@ body {
   margin: 5px;
   padding: 10px;
   width: 200px;
+}
+
+.bm-title {
+  padding: 0 20 0 0;
+  display: inline;
+}
+
+.bm-button {
+  display: inline;
 }

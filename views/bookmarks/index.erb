@@ -9,15 +9,33 @@
     </form>
 
     <ul>
+
       <% @bookmarks.each do |bookmark| %>
-        <li>
-          <a href="<%= bookmark.url %>">
-            <%= bookmark.title %>
-          </a>
-          <form action='/delete' method='post'>
-            <input type='hidden' name='delete_id' value='<%= bookmark.id %>' />
-            <input class="del_button" type="submit" id='<%= bookmark.id %>' value="X" />
+        <li class='bookmark'>
+          <% if @visible && @visible_id == bookmark.id %>
+          <%  visible = 'visible' %>
+          <% else %>
+          <%  visible = 'hidden' %>
+          <% end %>
+
+          <%= bookmark.id %>
+
+          <a href="<%= bookmark.url %>" class='bm-title'><%= bookmark.title %></a>
+          <form action='/edit/<%= bookmark.id %>' method='post' class='bm-button'>
+            <input type='hidden' name='_method' value='PATCH'>
+            <input class="bm-button" type="submit" value='Edit' />
           </form>
+          <form action='/delete' method='post' class='bm-button'>
+            <input type='hidden' name='delete_id' value='<%= bookmark.id %>' />
+            <input class="del_button" type="submit" id='delete <%= bookmark.id %>' value='X' />
+          </form>
+          <form action='/update/<%= bookmark.id %>' method='post' style='visibility:<%= visible %>'>
+            <input type='hidden' name='_method' value='PATCH'>
+            <input type='text' name='title' value='<%= bookmark.title %>'/>
+            <input type='text' name='url' value='<%= bookmark.url %>'/>
+            <input class="bm-button" type='submit' value='Update' />
+          </form>
+          
         </li> 
       <% end %>
     </ul>

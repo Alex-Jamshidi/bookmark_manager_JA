@@ -35,10 +35,21 @@ describe Bookmark do
 	describe '.delete' do
 		it 'deletes a bookmark' do
 			bookmark = Bookmark.create(url: 'http://www.example.com', title: 'EXAMPLE-TITLE')
-			bookmark_array = Bookmark.all
 
 			expect { Bookmark.delete(id: bookmark.id) }.to change { Bookmark.all.length }.by(-1)
 			expect(Bookmark.all).to_not include(bookmark)
+		end
+	end
+
+  describe '.update' do
+		it 'updates a bookmark' do
+			bookmark = Bookmark.create(url: 'http://www.example.com', title: 'EXAMPLE-TITLE')
+      updated_bookmark = Bookmark.update(id: bookmark.id, title: "Google", url: "http://google.com")
+
+			expect(updated_bookmark).to be_a Bookmark
+			expect(updated_bookmark.id).to eq bookmark.id
+			expect(updated_bookmark.title).to eq "Google"
+			expect(updated_bookmark.url).to eq "http://google.com"
 		end
 	end
 end

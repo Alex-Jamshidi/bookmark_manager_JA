@@ -5,7 +5,7 @@ feature 'Deleting Bookmarks' do
     bookmark = Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'DAS')
     Bookmark.create(url: 'http://www.google.com', title: 'Google')
     visit('/bookmarks')
-    find_by_id(bookmark.id).click
+    find_by_id("delete #{bookmark.id}").click
     expect(page).to have_link('Makers', href: 'http://www.makersacademy.com')
     expect(page).to_not have_link('DAS', href: 'http://www.destroyallsoftware.com')
     expect(page).to have_link('Google', href: 'http://www.google.com')
